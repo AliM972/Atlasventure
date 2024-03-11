@@ -2,6 +2,8 @@
  * The HintSystem class manages the hints mechanism in the game,
  * keeping track of available free hints, their cost, and the player's points.
  */
+
+
 public class HintSystem {
     private int freeHints;
     private int hintCost;
