@@ -76,6 +76,14 @@ public class TutorialScreen extends GameScreen {
 		hint.setBackground(null);
 		hint.setToolTipText("<html>This will give you<br/>a hint about the location.<br/>You have a set number of hints.</html>");
 		this.add(hint);
+		
+		this.setComponentZOrder(options, 0);
+		this.setComponentZOrder(score, 0);
+		this.setComponentZOrder(hintsLeft, 0);
+		this.setComponentZOrder(location, 0);
+		this.setComponentZOrder(answer, 0);
+		this.setComponentZOrder(hint, 0);
+
 	}	
 
 	@Override
