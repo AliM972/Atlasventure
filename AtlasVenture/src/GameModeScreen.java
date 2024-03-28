@@ -82,6 +82,11 @@ public class GameModeScreen extends GameScreen {
 			currentButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
 			this.add(currentButton);
 		}
+        
+        menuOptions.get(0).setToolTipText("Classic gameplay.");
+        menuOptions.get(1).setToolTipText("Locations shown are based on a theme.");
+        menuOptions.get(2).setToolTipText("Access the question set you created.");
+        menuOptions.get(3).setToolTipText("Create or edit your question set.");
 		
 	}
 
