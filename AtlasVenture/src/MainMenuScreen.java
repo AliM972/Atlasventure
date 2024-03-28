@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.border.Border;
 
 public class MainMenuScreen extends GameScreen {
 	
@@ -16,7 +17,7 @@ public class MainMenuScreen extends GameScreen {
 	}
 	
 	@Override
-	public void initialize() {
+	protected void initialize() {
 
 		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
 		this.setBackground(Color.gray);
@@ -43,6 +44,8 @@ public class MainMenuScreen extends GameScreen {
 		
 		for(int i = 0, y = 115; i < menuOptions.size(); i++, y+=60) {
 			JButton currentButton = menuOptions.get(i);
+	        Border blackBorder = BorderFactory.createLineBorder(Color.black, 3);
+	        currentButton.setBorder(blackBorder);
 			currentButton.setBounds(25,y,300,50);
 			currentButton.setBackground(Color.white);
 			currentButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
@@ -73,14 +76,28 @@ public class MainMenuScreen extends GameScreen {
 
 	@Override
 	public void activate() {
+		this.setVisible(true);
 	}
 
 	@Override
 	public void deactivate() {
+		this.setVisible(false);
 	}
+	
+	public void selectNextOption() {
+        selectedOption = (selectedOption + 1) % menuOptions.size();
+        updateScreen();
+    }
+
+    public void selectPreviousOption() {
+        selectedOption = (selectedOption - 1 + menuOptions.size()) % menuOptions.size();
+        updateScreen();
+    }
 
 	@Override
-	public void handleInput() {
+	protected void handleInput() {
 	}
+	
+	
 
 }

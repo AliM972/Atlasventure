@@ -5,7 +5,7 @@ public abstract class GameScreen extends JPanel {
     /**
      * Initializes the screen. This method should set up the initial state and UI components.
      */
-    public abstract void initialize();
+    protected abstract void initialize();
 
     /**
      * Updates the screen's content. This method is called periodically to refresh the screen's content
@@ -27,5 +27,5 @@ public abstract class GameScreen extends JPanel {
      * Handles user input. This method processes user inputs, such as keyboard strokes or mouse clicks,
      * and takes appropriate actions based on the input.
      */
-    public abstract void handleInput();
+    protected abstract void handleInput();
 }
