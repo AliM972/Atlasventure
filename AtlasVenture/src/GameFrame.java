@@ -11,13 +11,15 @@ public class GameFrame extends JFrame {
 		InstructorDashboardScreen dashboard = new InstructorDashboardScreen();
 		GameModeScreen gameMode = new GameModeScreen();
 		TutorialScreen tutorial = new TutorialScreen();
+		LevelSelectionScreen selectLevel = new LevelSelectionScreen("Classic");
 		
 //		this.add(mainMenu);
 //		this.add(highScores);
 //		this.add(gameplay);
 //		this.add(dashboard);
 //		this.add(gameMode);
-		this.add(tutorial);
+//		this.add(tutorial);
+		this.add(selectLevel);
 		
 		this.setTitle("AtlasVenture");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
